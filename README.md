@@ -46,6 +46,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[OP.GG](https://op.gg)**
 
 Developed by Mohamed A. Bahnsawy [Linkedin](https://www.linkedin.com/in/bahnsawy/).
+CEO of [Brmja.Tech](https://brmja.tech/)
 
 ## Contributing
 
