@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\MyinfoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,36 +18,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 //  Home Page
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class,'mainPage']);
 
 // Return myinfo page
-Route::get('/myinfo', function () {
-    return view('myinfo');
-});
+Route::get('/myinfo', [MyinfoController::class ,'viewPage']);
 
 // Return capitalized parameters
-Route::get('/myinfo/{key}', function ($key) {
-    $myinfo = ["name"=>"mohamed a. bahnsawy","email"=>"vipme1@outlook.com","age"=>27,"faculty"=>"tourism and hotels","university"=>"minia university"];
-    if (array_key_exists($key, $myinfo)){
-        return "My ".ucwords($key) . " is : " . ucwords($myinfo[$key]);
-    }elseif ($key == "request"){
-        return $myinfo;
-    }
-    else{
-        return "Not Found, Please try again";
-    }
-
-});
+Route::get('/myinfo/{key}', [MyinfoController::class, 'parameterReturn']);
 
 // Return Parameters
-Route::get('req', function () {
-    $name = request('name');
-    $myName = "mohamed";
-    if ($name == $myName){
-        return "My Name is : ".ucwords($name). " <br><br> This is a Parameter Value Returned from Route /req";
-    }else{
-        return "Not Found.";
-    } 
-});
+Route::get('req', [MyinfoController::class, "returnPara"]);
+
+// Blogs
+Route::get('blog', [BlogController::class, 'myblogs']);
+
+// Single Blog
+Route::get('single/{single}', [BlogController::class, 'singleBlog']);
