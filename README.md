@@ -45,6 +45,9 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Curotec](https://www.curotec.com/)**
 - **[OP.GG](https://op.gg)**
 
+Developed by Mohamed A. Bahnsawy [Linkedin](https://www.linkedin.com/in/bahnsawy/).
+CEO of [Brmja.Tech](https://brmja.tech/)
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
